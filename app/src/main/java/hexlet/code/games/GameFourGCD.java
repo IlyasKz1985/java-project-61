@@ -2,41 +2,34 @@ package hexlet.code.games;
 
 import hexlet.code.RandomNumbersForGames;
 
+import java.util.Random;
 import java.util.Scanner;
 
-import java.util.Random;
-
-public class GameThreeCalc {
-    public static void gameThreeCalc() {
-        // ask name and greet
+public class GameFourGCD {
+    public static void gameFourGCD() {
         Scanner nameScanner = new Scanner((System.in));
         String userName = nameScanner.next();
         System.out.println("Hello, " + userName + "!");
 
         // explain the rules of game
-        System.out.println("What is the result of the expression?");
+        System.out.println("Find the greatest common divisor of given numbers.");
 
         // cycle for questions
         // if there are 3 correct answers, the cycle stops
         for (var i = 1; i < 4; i++) {
             var randomNumber1 = RandomNumbersForGames.randomNumberForGames();
             var randomNumber2 = RandomNumbersForGames.randomNumberForGames();
-            Random o = new Random();
-            char randomOperator = "+-*".charAt(o.nextInt(3));
-            System.out.println("Question: " + randomNumber1 + randomOperator + randomNumber2);
+            System.out.println("Question: " + randomNumber1 + " " + randomNumber2);
 
             Scanner answerScanner = new Scanner((System.in));
             String answer = answerScanner.next();
 
+            // find GCD - greatest common divisor
             int result = 0;
-            if (randomOperator == '+') {
-                result = randomNumber1 + randomNumber2;
-            }
-            else if (randomOperator == '-') {
-                result = randomNumber1 - randomNumber2;
-            }
-            else if (randomOperator == '*') {
-                result = randomNumber1 * randomNumber2;
+            for (int d = 1; d <= randomNumber1 && d <= randomNumber2; d++) {
+                if (randomNumber1 % d == 0 && randomNumber2 % d ==0) {
+                    result = d;
+                }
             }
 
             String resultToString = String.valueOf(result);

@@ -34,7 +34,7 @@ public class GameTwoEven {
                 System.out.println("Your answer: no");
                 System.out.println("Correct!");
 
-                // congrats and finish the game
+                // congrats and finish the game for three correct answers in a row
                 if (i == 3){
                     System.out.println("Congratulations, " + userName + "!");
                 }
