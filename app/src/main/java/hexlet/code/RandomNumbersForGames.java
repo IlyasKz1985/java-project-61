@@ -1,5 +1,5 @@
 package hexlet.code;
-public class Random {
+public class RandomNumbersForGames {
     public static int randomNumberForGames() {
         // create list of numbers
         // choose one number from the list randomly
