@@ -6,4 +6,6 @@ asciinema record of Even (the second game) (step 5 of the Project): [src/main/ja
 
 asciinema record of Calc (the third game) (step 6 of the Project): https://asciinema.org/a/gxn2EfYeadk2wrfReaPRV0w4J
 
-asciinema reocrd of GCD (the fourth game) (step 7 of the Projetc): https://asciinema.org/a/FLX3hgYG0QToydlOyJt94gS2c
+asciinema reocrd of GCD (the fourth game) (step 7 of the Project): https://asciinema.org/a/FLX3hgYG0QToydlOyJt94gS2c
+
+asciinema reocrd of Progression (the firth game) (step 8 of the Project): https://asciinema.org/a/3rbrEJu9occanWuricOH52YcK
