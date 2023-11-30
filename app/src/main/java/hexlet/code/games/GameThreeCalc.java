@@ -16,17 +16,13 @@ public class GameThreeCalc {
         // explain the rules of game
         System.out.println("What is the result of the expression?");
 
-        // cycle for questions
-        // if there are 3 correct answers, the cycle stops
+        // questions
         for (var i = 1; i < 4; i++) {
             var randomNumber1 = RandomNumbersForGames.randomNumberForGames();
             var randomNumber2 = RandomNumbersForGames.randomNumberForGames();
             Random o = new Random();
             char randomOperator = "+-*".charAt(o.nextInt(3));
             System.out.println("Question: " + randomNumber1 + randomOperator + randomNumber2);
-
-            Scanner answerScanner = new Scanner((System.in));
-            String answer = answerScanner.next();
 
             int result = 0;
             if (randomOperator == '+') {
@@ -39,6 +35,9 @@ public class GameThreeCalc {
                 result = randomNumber1 * randomNumber2;
             }
 
+            //answers, if there are 3 correct answers, the cycle stops
+            Scanner answerScanner = new Scanner((System.in));
+            String answer = answerScanner.next();
             String resultToString = String.valueOf(result);
 
             if (resultToString.equals(answer)) {

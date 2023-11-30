@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.GameFourGCD;
-import hexlet.code.games.GameThreeCalc;
-import hexlet.code.games.GameTwoEven;
-import hexlet.code.games.GreetOne;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -30,6 +27,9 @@ public class Engine {
         }
         else if (gameNumberToInt == 4) {
             GameFourGCD.gameFourGCD();
+        }
+        else if (gameNumberToInt == 5) {
+            GameFiveProgression.gameFiveProgression();
         }
     }
 }

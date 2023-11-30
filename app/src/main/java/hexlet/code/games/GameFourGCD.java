@@ -14,15 +14,12 @@ public class GameFourGCD {
         // explain the rules of game
         System.out.println("Find the greatest common divisor of given numbers.");
 
-        // cycle for questions
-        // if there are 3 correct answers, the cycle stops
+        // questions
         for (var i = 1; i < 4; i++) {
             var randomNumber1 = RandomNumbersForGames.randomNumberForGames();
             var randomNumber2 = RandomNumbersForGames.randomNumberForGames();
             System.out.println("Question: " + randomNumber1 + " " + randomNumber2);
 
-            Scanner answerScanner = new Scanner((System.in));
-            String answer = answerScanner.next();
 
             // find GCD - greatest common divisor
             int result = 0;
@@ -32,6 +29,9 @@ public class GameFourGCD {
                 }
             }
 
+            // answers, if there are 3 correct answers, the cycle stops
+            Scanner answerScanner = new Scanner((System.in));
+            String answer = answerScanner.next();
             String resultToString = String.valueOf(result);
 
             if (resultToString.equals(answer)) {

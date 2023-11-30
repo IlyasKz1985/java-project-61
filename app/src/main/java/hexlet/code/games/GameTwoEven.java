@@ -14,14 +14,16 @@ public class GameTwoEven {
         // explain the rules of game
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
-        // cycle for questions
-        // if there are 3 correct answers, the cycle stops
+        // questions
         for (var i = 1; i < 4; i++) {
             var randomNumber = RandomNumbersForGames.randomNumberForGames();
             System.out.println("Question: " + randomNumber);
+
+            // answers, if there are 3 correct answers, the cycle stops
             Scanner answerScanner = new Scanner((System.in));
             String answer = answerScanner.next();
             String evenOdd = (randomNumber % 2 == 0) ? "yes" : "no";
+
             if (evenOdd.equals("yes") && answer.equals("yes")) {
                 System.out.println("Your answer: yes");
                 System.out.println("Correct!");
