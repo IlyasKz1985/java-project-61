@@ -9,27 +9,37 @@ public class Engine {
         Scanner chooseGame = new Scanner((System.in));
         String gameNumber = chooseGame.next();
         System.out.println("Your choice: " + gameNumber + "\n");
-        System.out.println("Welcome to the Brain Games!");
-        System.out.println("May I have your name?");
 
         int gameNumberToInt = Integer.parseInt(gameNumber);
-        // choose 1 to Greet
+
+        // choose the number of the games
         if (gameNumberToInt == 1) {
             GreetOne.greetOne();
-        }
-        // choose 2 to start game 2 - Even
-        else if (gameNumberToInt == 2) {
+        } else if (gameNumberToInt == 2) {
             GameTwoEven.gameTwoEven();
-        }
-        // choose 3 to start game 3 - Calc
-        else if (gameNumberToInt == 3) {
+        } else if (gameNumberToInt == 3) {
             GameThreeCalc.gameThreeCalc();
-        }
-        else if (gameNumberToInt == 4) {
+        } else if (gameNumberToInt == 4) {
             GameFourGCD.gameFourGCD();
-        }
-        else if (gameNumberToInt == 5) {
+        } else if (gameNumberToInt == 5) {
             GameFiveProgression.gameFiveProgression();
+        } else if (gameNumberToInt == 6) {
+            GameSixPrime.gameSixPrime();
         }
+    }
+    public static String askNameAndGreet() {
+        System.out.println("Welcome to the Brain Games!");
+        System.out.println("May I have your name?");
+        Scanner nameScanner = new Scanner((System.in));
+        String username = nameScanner.next();
+        System.out.println("Hello, " + username + "!");
+        return username;
+    }
+    public static int randomNumberForGames() {
+        // create list of numbers
+        // choose one number from the list randomly
+        int min = 1;
+        int max = 15;
+        return (int) ((Math.random() * (max - min + 1)) + min);
     }
 }
