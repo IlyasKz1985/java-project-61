@@ -21,7 +21,7 @@ public class GameThreeCalc {
 
             Random o = new Random();
             char randomOperator = "+-*".charAt(o.nextInt(3));
-            System.out.println("Question: " + randomNumber1 + randomOperator + randomNumber2);
+            System.out.println("Question: " + randomNumber1 + " " + randomOperator + " " + randomNumber2);
 
             int result = 0;
             if (randomOperator == '+') {
