@@ -40,7 +40,7 @@ public class GameTwoEven {
                 }
             } else { // wrong answer
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + evenOdd + "'");
-                System.out.println("Let's try again, " + userName);
+                System.out.println("Let's try again, " + userName + "!");
                 break;
             }
         }
