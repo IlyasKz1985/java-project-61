@@ -1,5 +1,19 @@
 package hexlet.code;
 
+//switch (selectedGame) {
+        //case "1":
+        //Cli.greet();
+        //break;
+        //case "2":
+        //Even.runGame();
+        //break;
+        //case "3":
+        //Calc.runGame();
+        //break;
+
+        //App -> Game -> Engine
+
+        // Да, это верная схема. В меню выбирается игра, игра запускается, игра использует движок.
 public class App {
     public static void main(String[] args) {
         // the main menu
