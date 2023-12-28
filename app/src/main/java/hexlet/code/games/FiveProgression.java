@@ -6,17 +6,19 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Random;
 
-public class GameFiveProgression {
-    public static void gameFiveProgression() {
+public class FiveProgression {
+    public static void fiveProgression() {
         // ask name and greet
         var userName = Engine.askNameAndGreet();
 
         // explain the rules of game
         System.out.println("What number is missing in the progression?");
 
-        for (var i = 1; i < 4; i++) {
+        int minimalLenghOfProgression = 4;
+
+        for (var i = 1; i < minimalLenghOfProgression; i++) {
         // create progression
-            int length = 4 + Engine.randomNumberForGames(); // lengthOfProgression
+            int length = minimalLenghOfProgression + Engine.randomNumberForGames(); // lengthOfProgression
             int startingNumber = Engine.randomNumberForGames(); // startingNumberOfProgression
             int diff = Engine.randomNumberForGames(); // differenceNumberOfProgression
 
@@ -64,7 +66,8 @@ public class GameFiveProgression {
                 System.out.println("Correct!");
 
                 // congrats and finish the game for three correct answers in a row
-                if (i == 3) {
+                var numberOfCorrectAnswers = 3;
+                if (i == numberOfCorrectAnswers) {
                     System.out.println("Congratulations, " + userName + "!");
                 }
             } else { // wrong answer

@@ -4,29 +4,35 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-public class GameFourGCD {
-    public static void gameFourGCD() {
+import java.util.Random;
+
+public class ThreeCalc {
+    public static void threeCalc() {
         // ask name and greet
         var userName = Engine.askNameAndGreet();
 
         // explain the rules of game
-        System.out.println("Find the greatest common divisor of given numbers.");
+        System.out.println("What is the result of the expression?");
 
         // questions
         for (var i = 1; i < 4; i++) {
             var randomNumber1 = Engine.randomNumberForGames();
             var randomNumber2 = Engine.randomNumberForGames();
-            System.out.println("Question: " + randomNumber1 + " " + randomNumber2);
 
-            // find GCD - greatest common divisor
+            Random o = new Random();
+            char randomOperator = "+-*".charAt(o.nextInt(3));
+            System.out.println("Question: " + randomNumber1 + " " + randomOperator + " " + randomNumber2);
+
             int result = 0;
-            for (int d = 1; d <= randomNumber1 && d <= randomNumber2; d++) {
-                if (randomNumber1 % d == 0 && randomNumber2 % d == 0) {
-                    result = d;
-                }
+            if (randomOperator == '+') {
+                result = randomNumber1 + randomNumber2;
+            } else if (randomOperator == '-') {
+                result = randomNumber1 - randomNumber2;
+            } else if (randomOperator == '*') {
+                result = randomNumber1 * randomNumber2;
             }
 
-            // answers, if there are 3 correct answers, the cycle stops
+            //answers, if there are 3 correct answers, the cycle stops
             Scanner answerScanner = new Scanner((System.in));
             String answer = answerScanner.next();
             String resultToString = String.valueOf(result);

@@ -2,8 +2,8 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-public class GreetOne {
-    public static void greetOne() {
+public class OneGreet {
+    public static void oneGreet() {
         // Ask name and greet
         Engine.askNameAndGreet();
     }

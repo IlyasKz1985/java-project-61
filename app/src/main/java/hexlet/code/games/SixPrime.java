@@ -4,8 +4,8 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-public class GameSixPrime {
-    public static void gameSixPrime() {
+public class SixPrime {
+    public static void sixPrime() {
         // ask name and greet
         var userName = Engine.askNameAndGreet();
 

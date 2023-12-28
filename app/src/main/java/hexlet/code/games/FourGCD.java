@@ -4,35 +4,29 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-import java.util.Random;
-
-public class GameThreeCalc {
-    public static void gameThreeCalc() {
+public class FourGCD {
+    public static void fourGCD() {
         // ask name and greet
         var userName = Engine.askNameAndGreet();
 
         // explain the rules of game
-        System.out.println("What is the result of the expression?");
+        System.out.println("Find the greatest common divisor of given numbers.");
 
         // questions
         for (var i = 1; i < 4; i++) {
             var randomNumber1 = Engine.randomNumberForGames();
             var randomNumber2 = Engine.randomNumberForGames();
+            System.out.println("Question: " + randomNumber1 + " " + randomNumber2);
 
-            Random o = new Random();
-            char randomOperator = "+-*".charAt(o.nextInt(3));
-            System.out.println("Question: " + randomNumber1 + " " + randomOperator + " " + randomNumber2);
-
+            // find GCD - greatest common divisor
             int result = 0;
-            if (randomOperator == '+') {
-                result = randomNumber1 + randomNumber2;
-            } else if (randomOperator == '-') {
-                result = randomNumber1 - randomNumber2;
-            } else if (randomOperator == '*') {
-                result = randomNumber1 * randomNumber2;
+            for (int d = 1; d <= randomNumber1 && d <= randomNumber2; d++) {
+                if (randomNumber1 % d == 0 && randomNumber2 % d == 0) {
+                    result = d;
+                }
             }
 
-            //answers, if there are 3 correct answers, the cycle stops
+            // answers, if there are 3 correct answers, the cycle stops
             Scanner answerScanner = new Scanner((System.in));
             String answer = answerScanner.next();
             String resultToString = String.valueOf(result);
@@ -42,7 +36,8 @@ public class GameThreeCalc {
                 System.out.println("Correct!");
 
                 // congrats and finish the game for three correct answers in a row
-                if (i == 3) {
+                var numberOfCorrectAnswers = 3;
+                if (i == numberOfCorrectAnswers) {
                     System.out.println("Congratulations, " + userName + "!");
                 }
             } else { // wrong answer

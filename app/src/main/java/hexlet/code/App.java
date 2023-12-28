@@ -13,7 +13,11 @@ package hexlet.code;
 
         //App -> Game -> Engine
 
-        // Да, это верная схема. В меню выбирается игра, игра запускается, игра использует движок.
+import hexlet.code.games.*;
+
+import java.util.Scanner;
+
+// Да, это верная схема. В меню выбирается игра, игра запускается, игра использует движок.
 public class App {
     public static void main(String[] args) {
         // the main menu
@@ -26,6 +30,26 @@ public class App {
                     5 - Progression
                     6 - Prime
                     0 - Exit""");
-        Engine.engine();
+
+        Scanner chooseGame = new Scanner((System.in));
+        String gameNumber = chooseGame.next();
+        System.out.println("Your choice: " + gameNumber + "\n");
+
+        int gameNumberToInt = Integer.parseInt(gameNumber);
+
+        // choose the number of the games
+        if (gameNumberToInt == 1) {
+            OneGreet.oneGreet();
+        } else if (gameNumberToInt == 2) {
+            TwoEven.twoEven();
+        } else if (gameNumberToInt == 3) {
+            ThreeCalc.threeCalc();
+        } else if (gameNumberToInt == 4) {
+            FourGCD.fourGCD();
+        } else if (gameNumberToInt == 5) {
+            FiveProgression.fiveProgression();
+        } else if (gameNumberToInt == 6) {
+            SixPrime.sixPrime();
+        }
     }
 }

@@ -4,8 +4,8 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-public class GameTwoEven {
-    public static void gameTwoEven() {
+public class TwoEven {
+    public static void twoEven() {
         // ask name and greet
         var userName = Engine.askNameAndGreet();
 
